@@ -6,9 +6,10 @@
  */
 
 function sumTwoSmallestNumbers(numbers){
-  const [a, b] = numbers.sort((a,b) => a - b)
-
-  return a + b
+  return numbers
+          .sort((a,b) => a - b)
+          .slice(0, 2)
+          .reduce((acc, current) => acc + current, 0)
 }
 
 module.exports = sumTwoSmallestNumbers
